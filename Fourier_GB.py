@@ -52,7 +52,7 @@ def Fourier_GB_2D(head,tail,surf,Lt,inorm,g):
     n_agg=np.zeros((time,3,2,g,g))             # grid directors            time * 3 * 2 * g * g
     h_agg=np.zeros((time,2,g,g))               # grid surface              time * 2 * g * g
 
-    z_c=np.mean(tail[:,:,2],axis=1)            # midplane                  time
+    z_c=np.mean(tail[:,:,2],axis=1)            # bilayer midplane          time
     alphas=((head[:,:,2].T>z_c).T)             # leaflet index             time * N
     gxs=(tail[:,:,0]%L*g//L)                   # x grid index              time * N
     gys=(tail[:,:,1]%L*g//L)                   # y grid index              time * N
